@@ -11,8 +11,8 @@ export const Container = styled.div`
   padding-top: 4rem;
   height: 100vh;
   width: 100%;
-  background: rgb(254,226,208);
-  background: linear-gradient(302deg, rgba(254,226,208,1) 0%, rgba(255,255,255,1) 46%, rgba(254,226,208,1) 100%);
+  background: #f1bbbb;
+  /* background: linear-gradient(302deg, rgba(254,226,208,1) 0%, rgba(255,255,255,1) 46%, rgba(254,226,208,1) 100%); */
 `;
 
 export const Product = styled.div`
@@ -27,7 +27,7 @@ overflow-y: auto;
 `;
 
 export const Box = styled(motion.div)`
-  border: solid 1px red;
+  /* border: solid 1px red; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -37,6 +37,7 @@ export const Box = styled(motion.div)`
   height: 25rem;
   margin: 1rem;
   cursor: pointer;
+  color: #2f3559;
   text-align: center;
   background-color: #fff;
   border-radius: 1.2rem;

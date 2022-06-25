@@ -46,9 +46,9 @@ export const NavbarMenuLink = styled(Link)`
   &:hover {
     width: 100%;
     height: 3rem;
-    border-bottom: 3px #f45665 solid;
+    border-bottom: 3px #9a5071 solid;
   }
   &:active {
-    border-bottom: 3px #f45665 solid;
+    border-bottom: 3px #9a5071 solid;
   }
 `;

@@ -8,8 +8,8 @@ export const Container = styled.div`
   justify-content: center;
   height: 100vh;
   width: 100%;
-  background: rgb(254,226,208);
-  background: linear-gradient(302deg, rgba(254,226,208,1) 0%, rgba(255,255,255,1) 46%, rgba(254,226,208,1) 100%);
+  background: #e394a7;
+  /* background: linear-gradient(302deg, rgba(254,226,208,1) 0%, rgba(255,255,255,1) 46%, rgba(254,226,208,1) 100%); */
 `;
 
 export const Box = styled.div`

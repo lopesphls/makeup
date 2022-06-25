@@ -1,25 +1,22 @@
 import { useEffect, useState } from 'react';
-import api from '../../services/api';
-import {
-  Box, BoxLink, Container, Image, Product
-} from './styled';
+import Api from '../../services/api';
+import { Box, BoxLink, Container, Image, Product } from './styled';
 
 export default function Home() {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    const getApi = async () => {
-      await api
-        .get('/products.json')
-        .then((response) => {
-          setProduct(response.data);
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    };
-    getApi();
+    setProduct(Api);
+    // const produtos = localStorage.getItem('produtos');
+    // console.log(produtos);
+    // if (produtos) {
+    //   setProduct(JSON.parse(produtos));
+    // } else {
+    //   getApi();
+    // }
   }, []);
+  console.log(Api);
+  console.log(product, 'teste');
 
   return (
     <Container>
