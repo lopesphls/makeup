@@ -6,17 +6,23 @@ export default function Home() {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    setProduct(Api);
-    // const produtos = localStorage.getItem('produtos');
-    // console.log(produtos);
-    // if (produtos) {
-    //   setProduct(JSON.parse(produtos));
-    // } else {
-    //   getApi();
-    // }
+    const getApi = async () => {
+      await Api.get('/products.json')
+        .then((response) => {
+          setProduct(response.data);
+          localStorage.setItem('produtos', JSON.stringify(response.data));
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    };
+    const produtos = localStorage.getItem('produtos');
+    if (produtos) {
+      setProduct(JSON.parse(produtos));
+    } else {
+      getApi();
+    }
   }, []);
-  console.log(Api);
-  console.log(product, 'teste');
 
   return (
     <Container>
